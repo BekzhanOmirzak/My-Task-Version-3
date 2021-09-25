@@ -37,7 +37,7 @@
  *     Picker Weng (pickerweng@gmail.com)
  */
 
-package com.example.hometaskversion3;
+package com.example.hometaskversion3.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -53,6 +53,8 @@ import android.view.SurfaceHolder;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+
+import com.example.hometaskversion3.ui.CameraRecorderActivity;
 
 import java.io.File;
 import java.io.IOException;

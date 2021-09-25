@@ -37,7 +37,7 @@
  *     Picker Weng (pickerweng@gmail.com)
  */
 
-package com.example.hometaskversion3;
+package com.example.hometaskversion3.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -48,6 +48,11 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Button;
 
+import com.example.hometaskversion3.receiver.ReceiverToStartAnApp;
+import com.example.hometaskversion3.R;
+import com.example.hometaskversion3.service.RecorderService;
+import com.example.hometaskversion3.utils.Utils;
+
 public class CameraRecorderActivity extends Activity implements SurfaceHolder.Callback {
 
     private static final String TAG = CameraRecorderActivity.class.getSimpleName();
@@ -56,7 +61,7 @@ public class CameraRecorderActivity extends Activity implements SurfaceHolder.Ca
     public static SurfaceHolder mSurfaceHolder;
     public static Camera mCamera;
 
-    private MyBroadCastReceiver receiver = new MyBroadCastReceiver();
+    private ReceiverToStartAnApp receiver = new ReceiverToStartAnApp();
 
 
     @Override
@@ -83,7 +88,7 @@ public class CameraRecorderActivity extends Activity implements SurfaceHolder.Ca
     private void startRecording() {
         new Thread(() -> {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

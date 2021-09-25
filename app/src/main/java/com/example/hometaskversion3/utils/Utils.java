@@ -1,4 +1,4 @@
-package com.example.hometaskversion3;
+package com.example.hometaskversion3.utils;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
